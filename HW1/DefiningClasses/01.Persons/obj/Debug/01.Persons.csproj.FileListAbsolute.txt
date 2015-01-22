@@ -1,0 +1,6 @@
+P:\SoftUni\OOP\OOP\HW1\DefiningClasses\01.Persons\bin\Debug\01.Persons.exe.config
+P:\SoftUni\OOP\OOP\HW1\DefiningClasses\01.Persons\bin\Debug\01.Persons.exe
+P:\SoftUni\OOP\OOP\HW1\DefiningClasses\01.Persons\bin\Debug\01.Persons.pdb
+P:\SoftUni\OOP\OOP\HW1\DefiningClasses\01.Persons\obj\Debug\01.Persons.csprojResolveAssemblyReference.cache
+P:\SoftUni\OOP\OOP\HW1\DefiningClasses\01.Persons\obj\Debug\01.Persons.exe
+P:\SoftUni\OOP\OOP\HW1\DefiningClasses\01.Persons\obj\Debug\01.Persons.pdb
