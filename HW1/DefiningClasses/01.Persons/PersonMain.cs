@@ -1,7 +1,7 @@
 ﻿using Persons;
 using System;
 
-namespace _01.PersonsMain
+namespace Persons
 {
     class PersonMain
     {
