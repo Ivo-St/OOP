@@ -1,76 +1,73 @@
 ﻿using System;
 
-class Person
+namespace Persons
 {
-    private string name;
-    private int age;
-    private string email;
-
-    public string Name
+    class Person
     {
-        get { return this.name; }
-        set
+        private string name;
+        private int age;
+        private string email;
+
+        public string Name
         {
-            if (!string.IsNullOrEmpty(value))
+            get { return this.name; }
+            set
             {
-                this.name = value;
-            }
-            else
-            {
-                throw new Exception("Name cannot be empty or null");
+                if (!string.IsNullOrEmpty(value))
+                {
+                    this.name = value;
+                }
+                else
+                {
+                    throw new ArgumentNullException("Name cannot be empty or null");
+                }
             }
         }
-    }
 
-    public int Age
-    {
-        get { return this.age; }
-        set
+        public int Age
         {
-            if (value >= 1 && value <= 100)
+            get { return this.age; }
+            set
             {
-                this.age = value;
-            }
-            else
-            {
-                throw new Exception("Age must be between 1 and 100");
+                if (value >= 1 && value <= 100)
+                {
+                    this.age = value;
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException("Age must be between 1 and 100");
+                }
             }
         }
-    }
 
-    public string Email
-    {
-        get { return this.email; }
-        set
+        public string Email
         {
-            if (value == null || value.Contains("@"))
+            get { return this.email; }
+            set
             {
-                this.email = value;
-            }
-            else
-            {
-                throw new Exception("Invalid email");
+                if (value == null || value.Contains("@"))
+                {
+                    this.email = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Invalid email");
+                }
             }
         }
-    }
 
-    public Person(string n, int a, string e = null)
-    {
-        Name = n;
-        Age = a;
-        Email = e;
-    }
+        public Person(string n, int a, string e = null)
+        {
+            Name = n;
+            Age = a;
+            Email = e;
+        }
 
-    public override string ToString()
-    {
-        if(Email!=null)
-            return "I am " + Name + " and I am " + Age + " years old. My email is " + Email;
-        return "I am " + Name + " and I am " + Age + " years old";
-    }
-
-    static void Main()
-    {
-        Person test = new Person("Test Person",20,"not@email");
-        Console.WriteLine(test);
+        public override string ToString()
+        {
+            if (Email != null)
+                return "I am " + Name + " and I am " + Age + " years old. My email is " + Email;
+            return "I am " + Name + " and I am " + Age + " years old";
+        }
     }
 }
