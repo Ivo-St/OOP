@@ -56,7 +56,7 @@ namespace LaptopShop
         {
             set
             {
-                //Validator.checkString(value, "Manifacturer");
+                Validator.checkString(value, "Manifacturer");
                 this.manifacturer = value;
             }
             get
