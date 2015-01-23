@@ -34,7 +34,7 @@ namespace LaptopShop
             if (Validator.IsValidBattery(Battery))
                 result.AppendLine("battery: " + Battery.ToString());
             if (Validator.IsValidDouble(BatteryLife))
-                result.AppendLine("battery life: " + BatteryLife);
+                result.AppendLine("battery life: " + BatteryLife + "hours");
             result.AppendLine("price: " + Price + "BGN");
             return result.ToString();
         }
