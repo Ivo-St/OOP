@@ -43,7 +43,8 @@ namespace LaptopShop
         {
             set
             {
-                Validator.checkString(value, "Model");
+                if (string.IsNullOrEmpty(value))
+                    throw new ArgumentNullException("Model cannot be null or empty");
                 this.model = value;
             }
             get

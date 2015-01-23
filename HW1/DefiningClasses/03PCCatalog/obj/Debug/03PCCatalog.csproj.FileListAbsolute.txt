@@ -1,0 +1,5 @@
+P:\SoftUni\OOP\OOP\HW1\DefiningClasses\03PCCatalog\bin\Debug\03PCCatalog.exe.config
+P:\SoftUni\OOP\OOP\HW1\DefiningClasses\03PCCatalog\bin\Debug\03PCCatalog.exe
+P:\SoftUni\OOP\OOP\HW1\DefiningClasses\03PCCatalog\bin\Debug\03PCCatalog.pdb
+P:\SoftUni\OOP\OOP\HW1\DefiningClasses\03PCCatalog\obj\Debug\03PCCatalog.exe
+P:\SoftUni\OOP\OOP\HW1\DefiningClasses\03PCCatalog\obj\Debug\03PCCatalog.pdb
