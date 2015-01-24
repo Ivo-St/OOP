@@ -1,41 +1,42 @@
 ﻿using System;
 using System.Text;
-namespace LaptopShop
+
+using System.Globalization;namespace LaptopShop
 {
     public class Laptop
     {
         private string model;
         private string manifacturer;
         private string processor;
-        private int ram;
+        private int? ram;
         private string graphicsCard;
         private string hdd;
         private string screen;
         private Battery battery;
-        private double batteryLife;
+        private double? batteryLife;
         private double price;
 
         private string createString()
         {
             StringBuilder result = new StringBuilder();
-            result.AppendLine("model: " + Model);
-            if (Validator.IsValidString(Manifacturer))
-                result.AppendLine("manifacturer: " + Manifacturer);
-            if (Validator.IsValidString(Processor))
-                result.AppendLine("processor: " + Processor);
-            if (Validator.IsValidInt(RAM))
-                result.AppendLine("RAM: " + RAM + " GB");
-            if (Validator.IsValidString(GraphicsCard))
-                result.AppendLine("graphics card: " + GraphicsCard);
-            if (Validator.IsValidString(HDD))
-                result.AppendLine("hdd: " + HDD);
-            if (Validator.IsValidString(Screen))
-                result.AppendLine("screen: " + Screen);
-            if (Validator.IsValidBattery(Battery))
-                result.AppendLine("battery: " + Battery.ToString());
-            if (Validator.IsValidDouble(BatteryLife))
-                result.AppendLine("battery life: " + BatteryLife + "hours");
-            result.AppendLine("price: " + Price + "BGN");
+            result.AppendLine("model: " + this.Model);
+            if (Validator.IsValidString(this.Manifacturer))
+                result.AppendLine("manifacturer: " + this.Manifacturer);
+            if (Validator.IsValidString(this.Processor))
+                result.AppendLine("processor: " + this.Processor);
+            if (Validator.IsValidInt(this.RAM))
+                result.AppendLine("RAM: " + this.RAM + " GB");
+            if (Validator.IsValidString(this.GraphicsCard))
+                result.AppendLine("graphics card: " + this.GraphicsCard);
+            if (Validator.IsValidString(this.HDD))
+                result.AppendLine("hdd: " + this.HDD);
+            if (Validator.IsValidString(this.Screen))
+                result.AppendLine("screen: " + this.Screen);
+            if (Validator.IsValidBattery(this.Battery))
+                result.AppendLine("battery: " + this.Battery.ToString());
+            if (Validator.IsValidDouble(this.BatteryLife))
+                result.AppendLine("battery life: " + this.BatteryLife + "hours");
+            result.AppendLine("price: " + this.Price.ToString("0.00") + " BGN");
             return result.ToString();
         }
 
@@ -80,11 +81,11 @@ namespace LaptopShop
             }
         }
 
-        public int RAM
+        public int? RAM
         {
             set
             {
-                Validator.checkInt(value, "RAM");
+                Validator.checkInt(value.GetValueOrDefault(), "RAM");
                 this.ram = value;
             }
 
@@ -149,11 +150,11 @@ namespace LaptopShop
             }
         }
 
-        public double BatteryLife
+        public double? BatteryLife
         {
             set
             {
-                Validator.checkDouble(value, "BatteryLife");
+                Validator.checkDouble(value.GetValueOrDefault(), "BatteryLife");
                 this.batteryLife = value;
             }
 
@@ -183,18 +184,18 @@ namespace LaptopShop
             Price = price;
         }
 
-        public Laptop(string model, double price, string manifacturer = null, string processor = null, int ram = 0, string graphics = null,
-                string hdd = null, string screen = null, Battery battery = null, double batteryLife = 0)
+        public Laptop(string model, double price, string manifacturer = null, string processor = null, int? ram = null, string graphics = null,
+                string hdd = null, string screen = null, Battery battery = null, double? batteryLife = null)
                 : this(model,price)
         {
-            Manifacturer = manifacturer;
-            Processor = processor;
-            RAM = ram;
-            GraphicsCard = graphics;
-            HDD = hdd;
-            Screen = screen;
-            Battery = battery;
-            BatteryLife = batteryLife;
+            this.Manifacturer = manifacturer;
+            this.Processor = processor;
+            this.RAM = ram;
+            this.GraphicsCard = graphics;
+            this.HDD = hdd;
+            this.Screen = screen;
+            this.Battery = battery;
+            this.BatteryLife = batteryLife;
         }
 
         public override string ToString()

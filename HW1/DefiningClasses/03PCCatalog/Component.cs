@@ -54,5 +54,10 @@
             this.Price = price;
             this.Details = details;
         }
+
+        public override string ToString()
+        {
+            return "Name: " + this.Name + ", price: " + this.Price;
+        }
     }
 }

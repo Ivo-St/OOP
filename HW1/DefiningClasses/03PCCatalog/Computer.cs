@@ -1,4 +1,5 @@
-﻿namespace PCCatalog
+﻿using System.Text;
+namespace PCCatalog
 {
     class Computer
     {
@@ -8,7 +9,6 @@
         private Component motherboard;
         private Component ram;
         private Component hdd;
-        private double price;
 
         private double CalculatePrice()
         {
@@ -32,6 +32,23 @@
             return result;
         }
 
+        public static Computer[] SortList(Computer[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = 0; j < arr.Length; j++)
+                {
+                    if (arr[i].CalculatePrice() < arr[j].CalculatePrice())
+                    {
+                        Computer tmp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = tmp;
+                    }
+                }
+            }
+            return arr;
+        }
+
         public string Name
         {
             set
@@ -43,20 +60,6 @@
             get
             {
                 return this.name;
-            }
-        }
-
-        public double Price
-        {
-            set
-            {
-                Validator.CheckDouble(value, "Price");
-                this.price = value;
-            }
-
-            get
-            {
-                return this.price;
             }
         }
 
@@ -125,20 +128,37 @@
             }
         }
 
-        public Computer(string name, double price)
+        public Computer(string name)
         {
             this.Name = name;
-            this.Price = price;
         }
 
-        public Computer(string name, double price, Component processor=null, Component graphics=null, Component motherboard=null, Component ram=null, Component hdd=null)
-            : this(name, price)
+        public Computer(string name, Component processor=null, Component graphics=null, Component motherboard=null, Component ram=null, Component hdd=null)
+            : this(name)
         {
             this.Processor = processor;
             this.GraphicsCard = graphics;
             this.Motherboard = motherboard;
             this.RAM = ram;
             this.HDD = hdd;
+        }
+
+        public string PrintPC()
+        {
+            StringBuilder result = new StringBuilder();
+            result.AppendLine("PC's name: " + this.Name);
+            if (Validator.IsValidComponent(this.Processor))
+                result.AppendLine("PC's processor: " + this.Processor);
+            if (Validator.IsValidComponent(this.GraphicsCard))
+                result.AppendLine("PC's graphics card: " + this.GraphicsCard);
+            if (Validator.IsValidComponent(this.Motherboard))
+                result.AppendLine("PC's motherboard: " + this.Motherboard);
+            if (Validator.IsValidComponent(this.RAM))
+                result.AppendLine("PC's ram: " + this.RAM);
+            if (Validator.IsValidComponent(this.HDD))
+                result.AppendLine("PC's hdd: " + this.HDD);
+            result.AppendLine("Components total price: " + CalculatePrice().ToString());
+            return result.ToString();
         }
         
     }

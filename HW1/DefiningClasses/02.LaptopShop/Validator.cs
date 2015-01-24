@@ -29,30 +29,22 @@ namespace LaptopShop
 
         public static bool IsValidString(string value)
         {
-            if(string.IsNullOrEmpty(value))
-                return false;
-            return true;
+            return !string.IsNullOrEmpty(value);
         }
 
-        public static bool IsValidInt(int value)
+        public static bool IsValidInt(int? value)
         {
-            if (value == 0)
-                return false;
-            return true;
+            return value.HasValue;
         }
 
-        public static bool IsValidDouble(double value)
+        public static bool IsValidDouble(double? value)
         {
-            if (value == 0)
-                return false;
-            return true;
+            return value.HasValue;
         }
 
         public static bool IsValidBattery(Battery value)
         {
-            if (value == null)
-                return false;
-            return true;
+            return value == null;
         }
     }
 }
