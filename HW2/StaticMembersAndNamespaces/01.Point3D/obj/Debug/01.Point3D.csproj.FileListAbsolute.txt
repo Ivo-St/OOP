@@ -1,0 +1,6 @@
+P:\SoftUni\OOP\OOP\HW2\StaticMembersAndNamespaces\01.Point3D\bin\Debug\01.Point3D.exe.config
+P:\SoftUni\OOP\OOP\HW2\StaticMembersAndNamespaces\01.Point3D\bin\Debug\01.Point3D.exe
+P:\SoftUni\OOP\OOP\HW2\StaticMembersAndNamespaces\01.Point3D\bin\Debug\01.Point3D.pdb
+P:\SoftUni\OOP\OOP\HW2\StaticMembersAndNamespaces\01.Point3D\obj\Debug\01.Point3D.csprojResolveAssemblyReference.cache
+P:\SoftUni\OOP\OOP\HW2\StaticMembersAndNamespaces\01.Point3D\obj\Debug\01.Point3D.exe
+P:\SoftUni\OOP\OOP\HW2\StaticMembersAndNamespaces\01.Point3D\obj\Debug\01.Point3D.pdb

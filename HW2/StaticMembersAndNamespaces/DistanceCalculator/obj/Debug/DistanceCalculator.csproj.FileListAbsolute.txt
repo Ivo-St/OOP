@@ -1,0 +1,1 @@
+P:\SoftUni\OOP\OOP\HW2\StaticMembersAndNamespaces\DistanceCalculator\bin\Debug\DistanceCalculator.exe.config
