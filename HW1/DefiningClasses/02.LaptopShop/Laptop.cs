@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
-
-using System.Globalization;namespace LaptopShop
+using System.Globalization;
+namespace LaptopShop
 {
     public class Laptop
     {
