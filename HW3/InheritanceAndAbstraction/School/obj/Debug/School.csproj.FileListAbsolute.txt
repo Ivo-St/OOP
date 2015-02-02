@@ -1,0 +1,6 @@
+E:\MEGA\SoftUni\OOP\HomeWork\HW3\InheritanceAndAbstraction\School\bin\Debug\School.exe.config
+E:\MEGA\SoftUni\OOP\HomeWork\HW3\InheritanceAndAbstraction\School\obj\Debug\School.csprojResolveAssemblyReference.cache
+E:\MEGA\SoftUni\OOP\HomeWork\HW3\InheritanceAndAbstraction\School\bin\Debug\School.exe
+E:\MEGA\SoftUni\OOP\HomeWork\HW3\InheritanceAndAbstraction\School\bin\Debug\School.pdb
+E:\MEGA\SoftUni\OOP\HomeWork\HW3\InheritanceAndAbstraction\School\obj\Debug\School.exe
+E:\MEGA\SoftUni\OOP\HomeWork\HW3\InheritanceAndAbstraction\School\obj\Debug\School.pdb
