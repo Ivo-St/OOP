@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7C6F7F25-2FDB-401F-B1A9-D8CE3BB7308D}</ProjectGuid>
+    <ProjectGuid>{99D0EAD7-4A34-4FD9-A11C-804BDF30E985}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TheSlum</RootNamespace>
-    <AssemblyName>TheSlum</AssemblyName>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BankKurtovoKonare</RootNamespace>
+    <AssemblyName>BankKurtovoKonare</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,19 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bonus.cs" />
-    <Compile Include="Character.cs" />
-    <Compile Include="GameEngine\Engine.cs" />
-    <Compile Include="GameObject.cs" />
-    <Compile Include="Interfaces\IAttack.cs" />
-    <Compile Include="Interfaces\IHeal.cs" />
-    <Compile Include="Interfaces\ITimeoutable.cs" />
-    <Compile Include="Item.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Team.cs" />
+    <Compile Include="Account.cs" />
+    <Compile Include="BankMain.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="DepositAccount.cs" />
+    <Compile Include="IAccount.cs" />
+    <Compile Include="IDepositable.cs" />
+    <Compile Include="IWithdrawable.cs" />
+    <Compile Include="LoanAccount.cs" />
+    <Compile Include="MortgageAccount.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
